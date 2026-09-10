@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sudeepthi 💜</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    background:
+        radial-gradient(circle at 20% 20%,#5b1a91 0%,transparent 30%),
+        radial-gradient(circle at 80% 80%,#7b1fa2 0%,transparent 30%),
+        linear-gradient(135deg,#030005,#100018,#020005);
+    color:white;
+}
+body::before,body::after{
+    content:"";
+    position:fixed;
+    border-radius:50%;
+    filter:blur(180px);
+    z-index:-1;
+    pointer-events:none;
+}
+body::before{
+    width:500px;height:500px;background:#8e24aa;opacity:.18;
+    top:-150px;left:-150px;animation:glow 7s infinite alternate;
+}
+body::after{
+    width:450px;height:450px;background:#6a1b9a;opacity:.15;
+    bottom:-150px;right:-150px;animation:glow2 8s infinite alternate;
+}
+@keyframes glow{to{transform:translate(180px,100px)}}
+@keyframes glow2{to{transform:translate(-150px,-100px)}}
+
+.stars span{
+    position:fixed;width:3px;height:3px;background:#fff;border-radius:50%;
+    box-shadow:0 0 10px #d896ff;animation:twinkle 3s infinite ease-in-out;
+    opacity:.7;z-index:0;
+}
+@keyframes twinkle{
+    0%,100%{opacity:.1;transform:scale(.5)}
+    50%{opacity:1;transform:scale(1.5)}
+}
+
+.container{
+    width:92%;max-width:980px;margin:auto;padding:70px 0;
+    text-align:center;position:relative;z-index:1;
+}
+.intro{
+    color:#d8a6ff;letter-spacing:5px;text-transform:uppercase;
+    font-size:13px;margin-bottom:20px;animation:fadeDown 1.5s ease;
+}
+h1{
+    font-size:clamp(42px,8vw,85px);font-weight:800;line-height:1;
+    background:linear-gradient(90deg,#fff,#d59cff,#9c27b0,#fff);
+    background-size:300%;-webkit-background-clip:text;color:transparent;
+    animation:gradientMove 5s infinite linear;
+    text-shadow:0 0 40px rgba(190,90,255,.4);
+}
+@keyframes gradientMove{0%{background-position:0%}100%{background-position:300%}}
+.subtitle{
+    margin-top:25px;font-size:18px;color:#d8c2e8;letter-spacing:1px;
+}
+.line{
+    width:120px;height:2px;margin:35px auto;
+    background:linear-gradient(90deg,transparent,#c05cff,transparent);
+    box-shadow:0 0 15px #b13cff;
+}
+.heart{
+    font-size:50px;margin:25px 0;animation:heartbeat 1.5s infinite;
+    filter:drop-shadow(0 0 15px #b62cff);
+}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+
+.message-card{
+    position:relative;margin-top:40px;padding:50px 45px;border-radius:25px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(203,126,255,.25);
+    backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
+    box-shadow:0 0 40px rgba(129,37,174,.18),inset 0 0 30px rgba(255,255,255,.02);
+    animation:cardAppear 2s ease;
+    text-align:left;
+}
+.message-card::before{
+    content:"";position:absolute;inset:-1px;border-radius:25px;padding:1px;
+    background:linear-gradient(120deg,transparent,#a83cff,transparent,#7e2cff,transparent);
+    -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+    pointer-events:none;
+}
+.message-card p{
+    font-family:Georgia,serif;font-size:19px;line-height:2;
+    color:#f3eafa;text-align:left;margin-bottom:22px;
+}
+.section-title{
+    color:#e0a7ff;font-size:25px;font-weight:700;
+    text-align:center;margin:38px 0 24px;
+    text-shadow:0 0 15px rgba(190,90,255,.5);
+}
+.highlight{
+    color:#d58cff;font-weight:bold;text-shadow:0 0 10px rgba(190,90,255,.5);
+}
+.quote{
+    margin:35px 0;padding:25px;border-left:3px solid #b44cff;
+    border-right:3px solid #b44cff;color:#e0baff;font-size:20px;
+    font-style:italic;background:rgba(155,50,200,.05);text-align:center;
+}
+.big-love{
+    text-align:center;font-size:25px;line-height:1.8;
+    margin:35px 0;color:#f2d8ff;
+}
+.signature{
+    margin-top:45px;text-align:center;font-family:"Brush Script MT",cursive;
+    font-size:35px;color:#d59cff;text-shadow:0 0 20px #9d32ff;
+}
+.from{
+    margin-top:8px;text-align:center;color:#9d8ba8;font-size:13px;letter-spacing:3px;
+}
+.floating-heart{
+    position:fixed;bottom:-50px;font-size:20px;animation:floatHeart 8s linear infinite;
+    opacity:0;pointer-events:none;z-index:0;
+}
+@keyframes floatHeart{
+    0%{transform:translateY(0) rotate(0);opacity:0}
+    10%{opacity:.8}
+    90%{opacity:.5}
+    100%{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+.love-button{
+    margin-top:35px;padding:14px 35px;border-radius:50px;
+    border:1px solid #c35cff;background:rgba(150,40,200,.1);
+    color:#f2d8ff;font-size:15px;cursor:pointer;transition:.4s;
+    box-shadow:0 0 20px rgba(190,70,255,.15);
+}
+.love-button:hover{
+    background:#9c27b0;
+    box-shadow:0 0 20px #b62cff,0 0 50px rgba(182,44,255,.5);
+    transform:translateY(-3px);
+}
+.modal{
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+    z-index:1000;align-items:center;justify-content:center;padding:20px;
+}
+.modal-box{
+    max-width:600px;width:100%;padding:35px;border-radius:25px;
+    background:linear-gradient(145deg,#160020,#09000f);
+    border:1px solid #b44cff;box-shadow:0 0 60px rgba(180,76,255,.4);
+    text-align:center;
+}
+.modal-box p{font-family:Georgia,serif;line-height:1.9;color:#f3eafa}
+.close{
+    margin-top:20px;padding:10px 25px;border:1px solid #b44cff;
+    border-radius:30px;background:transparent;color:#fff;cursor:pointer;
+}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cardAppear{from{opacity:0;transform:scale(.9) translateY(30px)}to{opacity:1;transform:scale(1) translateY(0)}}
+
+@media(max-width:600px){
+    .container{width:94%;padding:50px 0}
+    .message-card{padding:30px 22px}
+    .message-card p{font-size:17px;line-height:1.85}
+    .quote{font-size:17px}
+    .signature{font-size:30px}
+    .section-title{font-size:21px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars">
+    <span style="top:10%;left:15%;animation-delay:1s"></span>
+    <span style="top:25%;left:80%;animation-delay:2s"></span>
+    <span style="top:40%;left:30%;animation-delay:.5s"></span>
+    <span style="top:65%;left:90%;animation-delay:1.5s"></span>
+    <span style="top:80%;left:12%;animation-delay:2.5s"></span>
+    <span style="top:55%;left:60%;animation-delay:1s"></span>
+    <span style="top:15%;left:50%;animation-delay:3s"></span>
+    <span style="top:90%;left:75%;animation-delay:.7s"></span>
+</div>
+
+<div class="floating-heart" style="left:10%;animation-delay:1s">💜</div>
+<div class="floating-heart" style="left:25%;animation-delay:4s">♡</div>
+<div class="floating-heart" style="left:45%;animation-delay:2s">💜</div>
+<div class="floating-heart" style="left:65%;animation-delay:5s">✨</div>
+<div class="floating-heart" style="left:80%;animation-delay:3s">💜</div>
+<div class="floating-heart" style="left:90%;animation-delay:7s">♡</div>
+
+<div class="container">
+
+    <div class="intro">A Little Message From My MIND & Heart</div>
+
+    <h1>Happy Birthday<br>Sudeepthi 👸🤍</h1>
+
+    <div class="subtitle">Some feelings are too beautiful to keep hidden...</div>
+    <div class="line"></div>
+    <div class="heart">💜</div>
+
+    <div class="message-card">
+
+        <p>
+            First of all, imagine that I’m standing right in front of you and talking to you directly. 🫂❤️
+            I don’t want this to feel like one huge paragraph. I just want you to feel every word as if I’m saying it to you face to face. 👀
+        </p>
+
+        <p class="big-love">
+            <span class="highlight">MANY MORE MOST HAPPIEST BIRTHDAY, SUDEEPTHI 👸🤍</span>
+        </p>
+
+        <p>
+            I honestly don’t know how you have lived these 19 years and handled everything that came your way.
+            But from today onwards, whenever a hard situation comes into your life, I want you to face it without panicking.
+            I want you to develop a way of thinking where you experience the situation, understand it, learn from it,
+            and then find a way to solve it. 🧠💯
+        </p>
+
+        <p>
+            That is one of the reasons I gave you this book. 📖
+        </p>
+
+        <p>
+            You always say, <span class="highlight">“I’m thinking about it, but I don’t know the final answer yet.”</span> 😭
+            So I thought maybe this book could help you understand yourself better, think more clearly,
+            and build the mindset you need to handle whatever life brings.
+        </p>
+
+        <p>
+            And honestly, whatever decision you take in your life, I will always respect it. 🙌
+        </p>
+
+        <p>
+            If there is even the smallest thing I can do to help you with the things you want to change about yourself,
+            I genuinely want to do it.
+        </p>
+
+        <p>
+            You once told me that you want to change yourself and become a better version of yourself —
+            with more discipline, better behaviour, better thinking, and so many other things.
+        </p>
+
+        <p>
+            <span class="highlight">Really, that is a wonderful choice. ❤️</span>
+        </p>
+
+        <p>
+            And even in this, I wanted to support you in whatever small way I could.
+            That is why I searched for this book and gave it to you.
+        </p>
+
+        <p>
+            And when I say <em>support</em>, I don’t mean that I should be behind you 24/7,
+            talking to you about every single thing and telling you what to do.
+        </p>
+
+        <p>
+            Because if I keep doing that, you may change because of me — not because <strong>you</strong> wanted to change.
+        </p>
+
+        <p>
+            I want you to look at yourself, understand yourself, and change yourself.
+        </p>
+
+        <p>
+            I want this book to help you build the strength and mindset to lead your life the way <strong>you</strong> want to. 🧠💯
+        </p>
+
+        <div class="section-title">A Little Promise ❤️</div>
+
+        <p>
+            There is one more thing I want to say.
+        </p>
+
+        <p>
+            I wanted to wish you, <span class="highlight">“Happy Birthday, my dear little princess.”</span> 👸🤍
+        </p>
+
+        <p>
+            But once you told me that you would want to hear something like that from your future husband,
+            and that if other people called you that, you would feel uncomfortable.
+        </p>
+
+        <p>
+            I gave you my word that I would never repeat it again.
+        </p>
+
+        <p>
+            So I respected your words, and that is why I’m simply saying:
+        </p>
+
+        <p class="big-love"><span class="highlight">SUDEEPTHI. 😂❤️</span></p>
+
+        <p>
+            But honestly, you are something else to me. 👣❤️
+        </p>
+
+        <div class="section-title">Why I Could Never Hate You ❤️‍🩹</div>
+
+        <p>
+            I have tried so many times to get angry with you.
+        </p>
+
+        <p>
+            I really tried to show you some ego, at least a little bit. 😭
+        </p>
+
+        <p>
+            But somehow, I just couldn’t.
+        </p>
+
+        <p>
+            My mind simply wouldn’t accept it.
+        </p>
+
+        <p>
+            Every time I thought about getting angry with you, one thought would come into my mind:
+        </p>
+
+        <p>
+            <em>“No… my girl—sorry, someone’s girl 😭—is sensitive.
+            If I say something harsh, she will cry. She is already sensitive,
+            and if it comes from me, it will hurt her even more.”</em> ❤️‍🩹
+        </p>
+
+        <p>
+            That thought would always run through my mind.
+        </p>
+
+        <p>
+            And that is why I could never really hurt you intentionally.
+        </p>
+
+        <p>For a long time, I kept asking myself:</p>
+
+        <p>
+            <strong>Why can’t I get angry with her?</strong><br>
+            <strong>Why can’t I show my ego?</strong><br>
+            <strong>Why am I so emotionally attached?</strong><br>
+            <strong>Why am I this obsessed with her?</strong>
+        </p>
+
+        <p>
+            I thought about it so many times.
+        </p>
+
+        <p>
+            But honestly, I never found a proper answer.
+        </p>
+
+        <p>
+            The only thing I finally understood was:
+        </p>
+
+        <div class="quote">
+            “I CAN’T HATE YOU, SUDEEPTHI. 💯❤️‍🩹”<br>
+            Forever and never. 🫳❤️
+        </div>
+
+        <div class="section-title">When You Didn't Tell Me ❤️</div>
+
+        <p>
+            About one month ago, I asked you so many times,
+            <em>“What happened? What are you thinking about? If something is bothering you, just tell me.”</em>
+        </p>
+
+        <p>
+            I must have asked you almost a hundred times.
+        </p>
+
+        <p>
+            But every time, your answer was:
+        </p>
+
+        <p class="big-love"><strong>“Nothing happened. I’m fine.”</strong></p>
+
+        <p>
+            And you never told me what was actually going on.
+        </p>
+
+        <p>
+            If it had been someone else in your place, honestly, after asking so many times and getting the same answer,
+            my mind would probably have said:
+        </p>
+
+        <p>
+            <em>“Okay, she doesn’t want to tell me. Leave it. It’s her problem.”</em>
+        </p>
+
+        <p>
+            And slowly, I might have even started feeling a little bit of anger or hatred toward that person.
+        </p>
+
+        <p>
+            But with you, it was completely different.
+        </p>
+
+        <p>
+            Not even once did I feel that way.
+        </p>
+
+        <p>
+            In your case, I could ask you not a hundred times, not a thousand times,
+            but even <strong>one crore times</strong> if necessary until I understood what was actually bothering you. 😭❤️
+        </p>
+
+        <p>
+            Because somewhere inside me, I just couldn’t leave it.
+        </p>
+
+        <p>
+            I kept thinking:
+        </p>
+
+        <p>
+            <em>“Why is she like this? Why is she thinking like this? What happened to her? What is she going through?”</em>
+        </p>
+
+        <p>
+            At the same time, I also thought maybe you simply didn’t want to tell me.
+        </p>
+
+        <p>
+            So instead of continuously irritating you by asking again and again, I stopped.
+        </p>
+
+        <p>
+            Not because I stopped caring.
+        </p>
+
+        <p>
+            But because I wanted to respect your space.
+        </p>
+
+        <p class="big-love">⏳❤️</p>
+
+        <div class="section-title">About That Lie ❤️‍🩹</div>
+
+        <p>
+            And there is one more thing I want to be completely honest about.
+        </p>
+
+        <p>
+            Once I asked you, <strong>“Why did you lie to me?”</strong>
+        </p>
+
+        <p>
+            You told me that at that particular moment, you said it because of the situation,
+            and later you even explained the reason behind it.
+        </p>
+
+        <p>
+            If I’m being completely honest with you, if someone else had done the exact same thing to me,
+            my opinion of that person would probably have changed immediately.
+        </p>
+
+        <p>
+            But no matter how much I thought about it, <strong>my opinion of you never changed.</strong>
+        </p>
+
+        <p>
+            Maybe people will say:
+        </p>
+
+        <p>
+            <em>“Become close to someone. Love someone. Then you’ll understand the value of a lie.”</em>
+        </p>
+
+        <p>
+            Maybe they are right in some way.
+        </p>
+
+        <p>
+            But for me, I believe something else.
+        </p>
+
+        <p>
+            <strong>You can understand how strong a relationship really is only when the truth is eventually told.</strong>
+        </p>
+
+        <p>
+            And that is exactly why I want you to understand this:
+        </p>
+
+        <p class="quote">
+            <strong>The lie you told me was never more important to me than you were.</strong><br><br>
+            I cared more about <strong>you</strong> than about what you said.
+        </p>
+
+        <p>
+            So I’m saying it again, honestly:
+        </p>
+
+        <p class="big-love">
+            <span class="highlight">I NEVER HATE YOU, SUDEEPTHI. ❤️‍🩹</span>
+        </p>
+
+        <p>
+            Even when something hurts me, somehow you are still more important to me than my anger.
+        </p>
+
+        <div class="section-title">The Way I See You 👀🦋</div>
+
+        <p>
+            When I saw you for the first time, I felt something.
+        </p>
+
+        <p>
+            And every time I saw you after that, somehow I felt the same thing again —
+            almost as if I was seeing you for the very first time. 👀🦋
+        </p>
+
+        <p>
+            Even today, that feeling is still there.
+        </p>
+
+        <p>
+            Every moment I spent with you, I enjoyed it so much.
+        </p>
+
+        <p>
+            Your childishness. 🧸<br>
+            Your eyes. 👀<br>
+            Your cuteness. 👸<br>
+            Your behaviour. 🐼<br>
+            Your way of talking.<br>
+            Your crazy conversations.<br>
+            Everything.
+        </p>
+
+        <p>
+            I experienced so many different things because of you, and I genuinely enjoyed all of them.
+        </p>
+
+        <p>
+            And more than anything, I pray that you win in your life.
+        </p>
+
+        <p>
+            I want you to achieve whatever you want.
+        </p>
+
+        <p>
+            I want to see all your dreams come true.
+        </p>
+
+        <p>
+            I genuinely want to see you at the <strong>TOP. 💫</strong>
+        </p>
+
+        <p>
+            There is still so much I want to say about you…
+        </p>
+
+        <p>
+            But honestly, words are not coming anymore. 🥹❤️
+        </p>
+
+        <div class="quote">
+            “You are childish enough for my crazy conversations<br>
+            and mature enough for my emotional side. ❤️‍🩹💯”
+        </div>
+
+        <div class="section-title">You In My Life 🤞❤️</div>
+
+        <p>
+            If I had to describe you in one sentence, I would say:
+        </p>
+
+        <p>
+            <strong>You are childish enough for my crazy conversations and mature enough for my emotional side. ❤️‍🩹💯</strong>
+        </p>
+
+        <p>
+            I don’t know whether meeting you was something that was already written in destiny…
+        </p>
+
+        <p>
+            Or whether we wrote our own fate by choosing to meet each other.
+        </p>
+
+        <p>
+            I really don’t know.
+        </p>
+
+        <p>
+            But one thing I do know is that I feel very happy and lucky because you came into my life
+            and because you are a part of it. 🤞❤️
+        </p>
+
+        <p>
+            I don’t just pray that everything happens exactly the way you want.
+        </p>
+
+        <p>
+            I pray that whatever you <strong>truly need</strong> in your life comes to you.
+        </p>
+
+        <p>
+            Whatever makes you happy.
+        </p>
+
+        <p>
+            Whatever helps you grow.
+        </p>
+
+        <p>
+            Whatever gives you peace.
+        </p>
+
+        <p>
+            I mention these things in my prayers even more than I pray for myself.
+        </p>
+
+        <p>
+            And one more thing I genuinely wish for:
+        </p>
+
+        <p>
+            <strong>I really want you to continue your dance classes. 🦋💃</strong>
+        </p>
+
+        <p>
+            I have been waiting to see you dance at least once. 👉👈🦋
+        </p>
+
+        <p>
+            I really, really want to see that day.
+        </p>
+
+        <div class="section-title">If You Are Still With Me ❤️</div>
+
+        <p>
+            And if, somewhere in the future, you are still with me…
+        </p>
+
+        <p>
+            I genuinely feel like I would be one of the luckiest people.
+        </p>
+
+        <p>
+            And if you ask me how I would treat you, my answer is simple:
+        </p>
+
+        <p>
+            <strong>Your happiness would become my happiness.</strong><br>
+            <strong>Your sadness would become my sadness.</strong><br>
+            <strong>Your problems would become my problems.</strong>
+        </p>
+
+        <p>
+            Whatever situation comes, I would want to stand beside you. 🫳❤️
+        </p>
+
+        <p>
+            If I ever hold your hand, I don’t want to let it go easily.
+        </p>
+
+        <p>
+            No matter what situation comes, I want to be there.
+        </p>
+
+        <p>
+            That is my promise.
+        </p>
+
+        <p>
+            You might think:
+        </p>
+
+        <p>
+            <em>“These are just words. Anyone can say these things.”</em>
+        </p>
+
+        <p>
+            And honestly, I understand why you might think that.
+        </p>
+
+        <p>
+            But I want to prove that <strong>not every man is the same. 💯</strong>
+        </p>
+
+        <p>
+            You don’t have to believe my words immediately.
+        </p>
+
+        <p>
+            Just watch my actions.
+        </p>
+
+        <p>
+            Because actions will always speak louder than words.
+        </p>
+
+        <div class="section-title">About Your Words ❤️</div>
+
+        <p>
+            Once I asked you something:
+        </p>
+
+        <p>
+            <strong>“If we ever come into a commitment and enter a relationship, will that relationship stay in the future?”</strong>
+        </p>
+
+        <p>
+            And you said:
+        </p>
+
+        <p class="big-love"><strong>“It will stay.”</strong></p>
+
+        <p>
+            Honestly, that one sentence was enough for me.
+        </p>
+
+        <p>
+            But I also understand that you have your own plans.
+        </p>
+
+        <p>
+            You are not ready for all of this right now.
+        </p>
+
+        <p>
+            You yourself said that it feels too difficult.
+        </p>
+
+        <p>
+            And you also told me that you don’t like this topic being brought up between us.
+        </p>
+
+        <p>
+            So I respect that.
+        </p>
+
+        <p>
+            From the moment you told me that, I have not brought this topic between us again.
+        </p>
+
+        <p>
+            And I won’t bring it up again.
+        </p>
+
+        <p>
+            <strong>Your words matter to me.</strong>
+        </p>
+
+        <p>
+            So don’t worry.
+        </p>
+
+        <div class="section-title">If You Ever Need Me 🫳❤️</div>
+
+        <p>
+            And once again, I want to tell you:
+        </p>
+
+        <p class="big-love">
+            <span class="highlight">SUDEEPTHI, IF YOU EVER NEED ME, CALL ME. 🫳❤️</span>
+        </p>
+
+        <p>
+            I don’t care whether I’m sleeping.
+        </p>
+
+        <p>
+            I don’t care whether I’m dealing with my own problems.
+        </p>
+
+        <p>
+            I don’t care whether I’m angry with you.
+        </p>
+
+        <p>
+            If you genuinely need me, <strong>I will be there for you.</strong>
+        </p>
+
+        <div class="line"></div>
+
+        <p class="big-love">
+            Once again…<br><br>
+            <span class="highlight">HAPPY BIRTHDAY, SUDEEPTHI! 🫴🍫🌹🎂🤍</span>
+        </p>
+
+        <p>
+            You have successfully completed <strong>6,940 days</strong> of your life. 🥹🌹
+        </p>
+
+        <p>
+            And from this day forward, I just want you to be safe.
+        </p>
+
+        <p>
+            Always prepare your mind for every kind of situation.
+        </p>
+
+        <p>
+            Don’t panic.
+        </p>
+
+        <p>
+            Think.
+        </p>
+
+        <p>
+            Understand.
+        </p>
+
+        <p>
+            Learn.
+        </p>
+
+        <p>
+            Grow.
+        </p>
+
+        <p>
+            And become the person you want to become. 🧠💯
+        </p>
+
+        <p>
+            I genuinely hope the coming years give you everything you deserve.
+        </p>
+
+        <p>
+            And finally…
+        </p>
+
+        <p>
+            I think I have told you everything I honestly had inside my heart. 😊❤️
+        </p>
+
+        <p class="quote">
+            <strong>No filters.</strong><br>
+            <strong>No hiding.</strong><br>
+            <strong>Just honesty.</strong>
+        </p>
+
+        <p class="big-love">
+            Once again, <strong>Happy Birthday, Sudeepthi. 👸🤍</strong>
+        </p>
+
+        <p>Stay happy.</p>
+        <p>Stay safe.</p>
+        <p>Keep smiling.</p>
+        <p>Keep dancing. 🦋💃</p>
+
+        <p class="big-love">
+            And always remember…
+        </p>
+
+        <div class="quote">
+            <strong>I CAN'T HATE YOU, SUDEEPTHI. 💯❤️‍🩹</strong><br><br>
+            <strong>Forever and never. 🫳❤️</strong>
+        </div>
+
+        <div class="heart">🖤💜</div>
+
+        <div class="signature">With Lots of Love & Best Wishes</div>
+        <div class="from">— FROM SOMEONE WHO WISHES YOU THE BEST —</div>
+
+    </div>
+
+    <button class="love-button" onclick="showMessage()">💜 Tap Here</button>
+
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <p>
+            ✨ One more thing... ✨<br><br>
+            Never stop smiling.<br>
+            Never stop believing in yourself.<br>
+            Never stop growing.<br><br>
+            And always remember how special you are. 💜🖤
+        </p>
+        <button class="close" onclick="closeMessage()">Close ❤️</button>
+    </div>
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("modal").style.display="flex";
+}
+function closeMessage(){
+    document.getElementById("modal").style.display="none";
+}
+window.addEventListener("click",function(e){
+    const modal=document.getElementById("modal");
+    if(e.target===modal) closeMessage();
+});
+</script>
+
+</body>
+</html>
